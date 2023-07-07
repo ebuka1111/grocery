@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "type": "chrome",
+      "name": "https://github.com/ebuka1111/6b2class",
+      "request": "launch",
+      "url": "https://github.com/ebuka1111/6b2class"
+    }
+  ]
+}

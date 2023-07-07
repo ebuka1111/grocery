@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Fruits and Vegetables",
+    "image": "https://images.unsplash.com/photo-1519996529931-28324d5a630e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80",
+    "price": "₦5.99"
+  },
+  {
+    "id": 2,
+    "name": "Eggs and milk",
+    "image": "https://images.unsplash.com/photo-1593584785033-9c7604d0863f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVnZ3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60.",
+    "price": "₦4.99"
+  },
+  {
+    "id": 3,
+    "name": "Meat and Seafood",
+    "image": "https://images.unsplash.com/photo-1593584785033-9c7604d0863f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVnZ3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60.",
+    "price": "₦12.99"
+  },
+  {
+    "id": 4,
+    "name": "Bakery and Bread",
+    "image": "/Media/bakery_bread.jpg",
+    "price": "₦6.99"
+  },
+  {
+    "id": 5,
+    "name": "Pantry Staples",
+    "image": "/Media/pantry_staples.jpg",
+    "price": "₦9.99"
+  },
+  {
+    "id": 6,
+    "name": "Beverages",
+    "image": "/Media/beverages.jpg",
+    "price": "₦5.99"
+  },
+  {
+    "id": 7,
+    "name": "Frozen Foods",
+    "image": "/Media/frozen_foods.jpg",
+    "price": "₦8.99"
+  },
+  {
+    "id": 8,
+    "name": "Snacks",
+    "image": "/Media/snacks.jpg",
+    "price": "₦4.99"
+  },
+  {
+    "id": 9,
+    "name": "Canned Goods",
+    "image": "/Media/canned_goods.jpg",
+    "price": "₦3.99"
+  },
+  {
+    "id": 10,
+    "name": "Condiments and Sauces",
+    "image": "/Media/ondiments_sauces.jpg",
+    "price": "₦5.99"
+  }
+]
