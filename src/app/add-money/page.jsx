@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import react, { useState } from "react";
 import { SlArrowLeft } from "react-icons/sl";
 import { BsWallet2 } from "react-icons/bs";
 import Link from "next/link";
 
-export default function page() {
+export default function Page() {
   const [amount, setAmount] = useState(0);
   const [walletBalance, setWalletBalance] = useState(500.0);
 
@@ -24,7 +24,7 @@ export default function page() {
     <div>
       <div className="overflow-hidden">
         <span className="flex space-x-24 mt-8 mr-6 ml-6">
-          <Link href={"/"}>
+          <Link href="/">
             <SlArrowLeft className="border-2 rounded px-2 py-2 w-[40px] h-[40px]" />
           </Link>
           <h1 className="font-semibold mt-3 pl-6">Add Money</h1>
@@ -86,17 +86,16 @@ export default function page() {
             +$5000
           </button>
         </div>
-        <div className="border py-4 mt-4 rounded-lg text-center flex justify-around ml-2 mr-2 bg-white ">
-          <p>$</p>
-          <input
-            type="text"
-            value=""
-            placeholder="Enter Amount"
-            className="text-black"
-          />
-        </div>
-        <button className="text-white flex justify-center items-center text-center bg-green-600  px-40 py-4 mt-12 rounded-lg text-[20px] mr-6 font-semibold">
-          onClick={setWalletBalance}
+        <input
+          className="text-black w-full mt-6 rounded-lg"
+          onChange={handleInputChange}
+        >
+        </input>
+
+        <button
+          onClick={handleAddMoney}
+          className="text-white flex justify-center items-center text-center bg-green-600  px-40 py-4 mt-12 rounded-lg text-[20px] mr-6 font-semibold"
+        >
           Add Money
         </button>
       </div>
