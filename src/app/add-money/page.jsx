@@ -1,7 +1,7 @@
 "use client";
 import react, { useState } from "react";
 import { SlArrowLeft } from "react-icons/sl";
-import { BsWallet2 } from "react-icons/bs";
+import { BsWalletFill } from "react-icons/bs";
 import Link from "next/link";
 
 export default function Page() {
@@ -33,7 +33,7 @@ export default function Page() {
       <div className="mt-16 ml-6 mr-6 bg-orange-500 rounded-md px-4 py-4 h-[400px]">
         <span className="flex justify-between">
           <h2 className="mt-2 text-gray-600">Wallet Balance</h2>
-          <BsWallet2 className="bg-white rounded-md text-green-500 w-[36px] h-[36px] px-2 py-2" />
+          <BsWalletFill className="bg-white rounded-md text-green-500 w-[36px] h-[36px] px-2 py-2" />
         </span>
         <p className="font-bold">$ 500.00</p>
         <div className="grid grid-cols-4 grid-rows-2 gap-2 pt-4 px-2">

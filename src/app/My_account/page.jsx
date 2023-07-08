@@ -24,6 +24,7 @@ export default function page() {
       <div className="pt-20">
         <div className="flex items-center justify-center h-[20] w-[20] rounded-full border-4 border-orange-600 bg-white ml-28 mr-28">
           <Image
+            alt=""
             src={"/Media/drinks.jpg"}
             width={150}
             height={150}
