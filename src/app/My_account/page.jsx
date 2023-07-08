@@ -5,7 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { BsWallet2 } from "react-icons/bs";
+import { BsWalletFill } from "react-icons/bs";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { LuLanguages } from "react-icons/lu";
 
@@ -69,7 +69,7 @@ export default function page() {
 
         <div className="flex justify-evenly pt-6 ml-4 text-white">
           <span className="flex justify-around">
-            <BsWallet2 className=" text-orange-600 mr-6 w-[50px] h-[50px] border rounded-2xl px-1 py-1 bg-white" />
+            <BsWalletFill className=" text-orange-600 mr-6 w-[50px] h-[50px] border rounded-2xl px-1 py-1 bg-white" />
             <label
               className="text-[20px] font-medium pt-2 pl-2 mr-6"
               htmlFor="Payment"

@@ -1,7 +1,7 @@
 import React from "react";
 import { HiHome } from "react-icons/hi";
 import { GrFavorite } from "react-icons/gr";
-import { BiWalletAlt } from "react-icons/Bi";
+import { BsWalletFill } from "react-icons/bs";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import Link from "next/link";
@@ -23,7 +23,7 @@ export default function Navbar() {
           </li>
           <li className="mr-1.5">
             <Link href="/Wallet">
-              <BiWalletAlt className="ml-3 mb-1 w-[24px] h-[24px] hover:shadow-2xl " />
+              <BsWalletFill className="ml-3 mb-1 w-[24px] h-[24px] hover:shadow-2xl " />
               <label htmlFor="Wallet" className="">
                 Wallet
               </label>

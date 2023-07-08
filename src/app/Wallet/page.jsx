@@ -1,6 +1,6 @@
 import React from "react";
 import { SlArrowLeft } from "react-icons/sl";
-import { BsWallet2 } from "react-icons/bs";
+import { BsWalletFill } from "react-icons/bs";
 import Link from "next/link";
 import Navbar from "../Component/Navbar";
 
@@ -18,7 +18,7 @@ export default function Page() {
       <div className="border-4 border-orange-600 mt-16 ml-6 mr-6 bg-white rounded-md px-4 py-4">
         <span className="flex justify-between">
           <h2 className="mt-2 text-gray-600">Wallet Balance</h2>
-          <BsWallet2 className="bg-white shadow-lg rounded-md text-orange-600 w-[36px] h-[36px] px-2 py-2" />
+          <BsWalletFill className="bg-white shadow-lg rounded-md text-orange-600 w-[36px] h-[36px] px-2 py-2" />
         </span>
         <p className="font-bold">$ 500.00</p>
         <Link href="/add-money">
