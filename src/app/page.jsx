@@ -1,5 +1,5 @@
-"use client¬";
-import { GiHamburgerMenu } from "react-icons/gi";
+"use client";
+// import { GiHamburgerMenu } from "react-icons/gi";
 import { ImLocation } from "react-icons/im";
 import { BsFillBellFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
@@ -7,47 +7,138 @@ import { LuSettings2 } from "react-icons/lu";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "./Component/Slider";
-// import list from "./Component/Item.json";
+import Footer from "./Component/Footer";
 import Navbar from "./Component/Navbar";
+
+export const fruits = [
+  {
+    id: "vegetables",
+    name: "Carrot",
+    type: "Root Vegetable",
+    color: "Orange",
+    nutrients: ["Vitamin A", "Vitamin K", "Fiber"],
+    description:
+      "Carrots are crunchy and sweet root vegetables that are rich in beta-carotene, which is converted into vitamin A in the body. They are also a good source of other vitamins, minerals, and fiber.",
+    benefits: [
+      "Promotes eye health",
+      "Supports immune function",
+      "Aids digestion",
+    ],
+    image_url: "/Media/vegetables.jpg",
+  },
+  {
+    id: "drinks",
+    name: "Coffee",
+    type: "Hot Beverage",
+    caffeinated: true,
+    description:
+      "Coffee is a popular hot beverage made from roasted coffee beans. It contains caffeine, a natural stimulant, and offers a rich and aromatic flavor.",
+    benefits: [
+      "Increases alertness",
+      "Enhances cognitive function",
+      "Provides antioxidants",
+    ],
+    image_url: "/Media/drinks.jpg",
+  },
+  {
+    id: "fruits",
+    name: "Strawberries",
+    origin: "Europe and North America",
+    botanical_name: "Fragaria × ananassa",
+    attributes: ["Sweet", "Juicy", "Heart-shaped", "Bright red color"],
+    description:
+      "Strawberries are luscious and juicy fruits with a vibrant red color. They are low in calories and packed with vitamins, antioxidants, and fiber.",
+    benefits: [
+      "Rich in antioxidants",
+      "Supports heart health",
+      "Enhances skin health",
+    ],
+    image_url: "/Media/fruits.png",
+  },
+  {
+    id: "milk/eggs",
+    name: "Milk",
+    type: "Dairy",
+    source: "Cows",
+    nutrients: ["Calcium", "Protein", "Vitamin D"],
+    description:
+      "Milk is a nutrient-rich dairy product produced by mammals, most commonly cows. It is a good source of calcium, protein, vitamins, and minerals.",
+    benefits: [
+      "Strengthens bones and teeth",
+      "Promotes muscle growth and repair",
+      "Provides essential nutrients for overall health",
+    ],
+    image_url: "/Media/milk-eggs.jpg",
+  },
+];
+
+const yum = fruits.map((fruit) => (
+  <div className="flex flex-col justify-center">
+    <Link href={`/Component/${fruit.id}`}>
+      <div className="h-[50px] w-[50px] rounded-md shadow-md">
+        <Image
+          className="rounded-lg"
+          src={fruit.image_url}
+          alt={fruit.name}
+          width={50}
+          height={50}
+        />
+        <p className="flex text-[16px] justify-center items-center text-orange-500 mt-3 ml-2 mr-2 hover:text-[24px]">
+          {fruit.id}
+        </p>
+      </div>
+    </Link>
+  </div>
+));
 
 export default function page() {
   return (
-    <div className="overflow-hidden w-full fixed">
+    <div className="overflow-hidden m-auto bg-gray-100 h-screen w-full fixed">
       <div className="flex justify-between">
-        <span className="ml-6">
-          <GiHamburgerMenu
-            size={38}
-            className="mt-2.5 shadow-2xl text-orange-400"
-          />
-        </span>
+        <div>
+          <Navbar />
+        </div>
         <section>
-          <p className="text-[13px] font-semibold text-center mt-2 mb-1">
+          <p className="text-[18px] font-bold text-center ml-4 mt-2 mb-1">
             Location
           </p>
           <span className="flex">
-            <ImLocation size={20} className="mr-1 mb-1 text-orange-600" />
+            <ImLocation size={24} className="mb-1 ml-4 text-orange-600" />
             <select
               id=""
               name=""
-              className="bg-white rounded text-center font-bold text-orange-400"
+              className="bg-transparent rounded text-center ml-2 font-bold text-orange-500"
             >
-              <option value="Australia">Australia</option>
-              <option value="England">England</option>
-              <option value="Nigeria">Nigeria</option>
-              <option value="Spain">Spain</option>
-              <option value="Germany">Germany</option>
-              <option value="Luxemborg">Luxemborg</option>
-              <option value="Japan">Japan</option>
-              <option value="Sweden">Australia</option>
+              <option className="bg-transparent" value="Australia">
+                Australia
+              </option>
+              <option className="bg-transparent" value="England">
+                England
+              </option>
+              <option className="bg-transparent" value="Nigeria">
+                Nigeria
+              </option>
+              <option className="bg-transparent" value="Spain">
+                Spain
+              </option>
+              <option className="bg-transparent" value="Germany">
+                Germany
+              </option>
+              <option className="bg-transparent" value="Luxemborg">
+                Luxemborg
+              </option>
+              <option className="bg-transparent" value="Japan">
+                Japan
+              </option>
+              <option className="bg-transparent" value="Sweden">
+                Australia
+              </option>
             </select>
           </span>
         </section>
         <link href={`/`}></link>
         <span>
-          <BsFillBellFill
-            size={28}
-            className="mr-8 shadow-2xl mt-2 text-orange-500"
-          />
+          <BsFillBellFill size={24} className="mr-6 mt-3 text-orange-500" />
         </span>
       </div>
       <div className="flex justify-between mt-4 ml-6 mr-6 border-2 border-black rounded-full">
@@ -55,78 +146,29 @@ export default function page() {
         <input
           type="text"
           placeholder="Search foods,drink,etc"
-          className="border-none text-center text-[13px]"
+          className=" bg-transparent border-none text-center text-[13px]"
         />
         <LuSettings2 size={26} className="rounded-r-full mt-1.5 mr-1 mb-1.5" />
       </div>
       <div className="flex justify-between ml-6 mr-4 mt-6">
-        <h1 className="text-[20px] mb-4">Categories</h1>
-        <Link href={`/Categories`}>
-          <h2 className="text-orange-500 text-[16px] mr-4">See all</h2>
+        <h1 className="text-[24px] font-medium mb-4">Categories</h1>
+        <Link href="./categories">
+          <h2 className="text-[16px] font-normal mr-4 mt-2 hover:text-orange-500">
+            See all
+          </h2>
         </Link>
       </div>
-      <div className="grid grid-cols-4 grid-rows-1">
-        <div className=" w-[14vh] h-[20] ml-6 rounded-lg">
-          <Image
-            src="https://images.unsplash.com/photo/banana.webp"
-            width={`100`}
-            height={`100`}
-            className="mt-1 ml-4"
-            alt=""
-          />
-        </div>
-        <div className=" w-[14vh] h-[20] rounded-lg ml-4">
-          <Image
-            src="/Image/drinks.jpg"
-            alt="drinks"
-            width={`60`}
-            height={`60`}
-            className="mt-1 ml-4 rounded-lg"
-          />
-        </div>
-        <div className=" w-[14vh] h-[20] ml-2 rounded-lg">
-          <Image
-            src="/Image/fruit-bowl.jpg"
-            alt="fruit-bowl"
-            width={`60`}
-            height={`60`}
-            className="ml-4 mt-1 rounded-lg"
-          />
-        </div>
-        <div className=" w-[14vh] h-[20] rounded-lg ">
-          <Image
-            src="/Image/milk-eggs.jpg"
-            alt="milk-eggs"
-            width={`70`}
-            height={`70`}
-            className="mt-2 ml-3 rounded-lg"
-          />
-        </div>
-      </div>
-      <span className="flex justify-between mr-6 ml-6 mt-2">
-        <label
-          className=" ml-1 text-orange-500 font-semibold"
-          htmlFor="Vegetables"
-        >
-          Vegetables
-        </label>
-        <label className="mr-4 text-orange-500 font-semibold" htmlFor="Drinks">
-          Drinks
-        </label>
-        <label className="mr-1 text-orange-500 font-semibold" htmlFor="Fruits">
-          Fruits
-        </label>
-        <label htmlFor="Milk-eggs" className="text-orange-500 font-semibold">
-          Milk-eggs
-        </label>
-      </span>
-      <div className="ml-6 mt-6 flex justify-between ">
-        <p className="text-[22px] ">Deals</p>
-        <Link href={`/Categories`}>
-          <h2 className="text-green-400 text-[16px] mr-4">See all</h2>
+      <div className="flex justify-around mt-2">{yum}</div>
+
+      <div className="ml-6 mt-14 flex justify-between">
+        <p className="text-[24px] font-medium">Deals</p>
+        <Link href={`/categories`}>
+          <h2 className="hover:text-orange-500 mt-2 text-[16px] font-normal mr-6">
+            See all
+          </h2>
         </Link>
       </div>
-      <div className="bg-orange-500 shadow-lg shadow-orange-300 h-[170px] ml-6 mr-5 rounded-md mt-3">
+      <div className="bg-orange-500 shadow-lg h-[170px] ml-6 mr-5 rounded-md mt-3">
         <span>
           <p className="ml-6 text- text-[24px] pt-6 text-black font-semibold">
             50% OFF
@@ -134,23 +176,27 @@ export default function page() {
           <p className="ml-6 text-[24px] text-black font-semibold">
             On Grocery Combo packs.
           </p>
-          <button className="ml-6 mt-4 bg-white hover:font-[30] rounded-lg text-orange-500 pt-2 pl-2 pr-2 pb-2">
+          <button className="ml-6 mt-4 bg-white hover:text-white hover:bg-transparent hover:pl-6 hover:pr-6 hover:border-2 border-white rounded-lg text-orange-500 pt-2 pl-2 pr-2 pb-2">
             Order now
           </button>
         </span>
         <Image src={""} alt={""} />
       </div>
       <div>
-        <span className="flex justify-between ml-6 mt-6 mr-6">
-          <p className="text-[22px] ">Popular items</p>
-          <Link href={`/Popular`}>
-            <h2 className="text-green-400 text-[16px] mr-2">See all</h2>
+        <span className="flex justify-between ml-6 mt-6 mr-6 bg-transparent">
+          <p className="text-[24px] font-medium ">Popular items</p>
+          <Link href={`/popular_items`}>
+            <p className="text-[16px] font-normal mr-2 mt-2 hover:cursor-pointer hover:text-orange-500">
+              See all
+            </p>
           </Link>
         </span>
-        <Slider />
+        <div className="mt-4">
+          <Slider />
+        </div>
       </div>
-      <div>
-        <Navbar />
+      <div className="mt-6">
+        <Footer />
       </div>
     </div>
   );

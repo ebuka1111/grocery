@@ -5,32 +5,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/bundle";
 import Image from "next/image";
 import { AiOutlinePlus } from "react-icons/ai";
-import { TbCurrencyNaira } from "react-icons/tb";
 import { Pagination, Autoplay } from "swiper";
 import list from "./Item.json";
 
 export default function Slider() {
   const data = list.map((Item) => (
-    <SwiperSlide
-      key={Item.image}
-      className="text-center bg-white shadow-lg h-[50] w-[200] pt-6 pb-6"
-    >
-      <div className="bg-green-500">
+    <SwiperSlide key={Item.image} className="w-[90px] h-max">
+      <div className="bg-gray-200 w-[100px] shadow-lg h-[180px] flex flex-col justify-center rounded-lg">
         <Image
-          className="rounded-lg pl-20"
+          className="rounded-md shadow-md text-center"
           src={Item.image}
           alt="pic"
-          width={280}
-          height={150}
-        /> 
-        <div className="font-bold mt-7 text-center text-black flex justify-between">
+          width={200}
+          height={200}
+        />
+        <h3 className="font-medium text-center mt-4 mb-1 text-[14px] text-black flex justify-center">
           {Item.name}
-        </div>
-        <div className="text-orange-500">
-          <TbCurrencyNaira />${Item.price}
-          <span>/kg</span>
+        </h3>
+        <div className="text-orange-500 flex justify-around items-center ml-2">
+          <div className="flex">
+            <span className="text-[12px] text-center">{Item.price}</span>
+            <span className="text-[12px]">/kg</span>
+          </div>
           <Link href="/Cart">
-            <div>
+            <div className="text-[12px] mr-2">
               <AiOutlinePlus />
             </div>
           </Link>
@@ -40,16 +38,17 @@ export default function Slider() {
   ));
   return (
     <Swiper
+      className="shadow-md hover:cursor-pointer"
       modules={[Pagination, Autoplay]}
-      spaceBetween={50}
-      slidesPerView={3}
+      spaceBetween={80}
+      slidesPerView={4}
       centeredSlides={true}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      // pagination={{ clickable: true }}
+      // scrollbar={{ draggable: true }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
     >

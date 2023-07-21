@@ -8,17 +8,20 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsWalletFill } from "react-icons/bs";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { LuLanguages } from "react-icons/lu";
+import Footer from "../Component/Footer";
 
 export default function page() {
   return (
-    <div className="pl-6 pr-6 mt-6 mb-6 w-full overflow-hidden fixed">
+    <div className="mt-6 mb-6 bg-gray-100 h-screen w-full fixed shadow-md overflow-hidden">
       <div>
         <Link href="/">
-          <span className="flex justify-between">
-            <MdOutlineArrowBackIos className="mt-2 shadow-4xl rounded-lg border-4 border-gray-100 h-[60px] pt-2 pb-2 bg-white w-[60px]" />
-            <h1 className="mt-8 text-[20px] pr-40 font-medium">My Account</h1>
-          </span>
+          <MdOutlineArrowBackIos className="mt-2 shadow-4xl ml-6 rounded-lg border-4 border-gray-100 h-[50px] pt-2 pb-2 bg-white w-[50px] fixed" />
         </Link>
+        <span className="">
+          <h1 className="mt-8 text-[20px] text-center font-medium">
+            My Account
+          </h1>
+        </span>
       </div>
 
       <div className="pt-20">
@@ -36,7 +39,7 @@ export default function page() {
           Igboeri D. Ebuka
         </h2>
       </div>
-      <div className="pt-6 mt-24 mr-8 bg-orange-600 h-[600px] w-full rounded-3xl">
+      <div className="pt-6 mt-24 mr-8 bg-orange-600 h-[530px] w-full rounded-3xl">
         <div>
           <p className="text-white border-t-4 border-white ml-40 rounded mr-40  "></p>
           <p className="ml-4 mr-2 mt-8 text-white text-[18px] font-semibold">
@@ -104,6 +107,9 @@ export default function page() {
           </span>
           <MdArrowForwardIos className="ml-12 w-[24px] h-[24px] mt-4 mr-4" />
         </div>
+      </div>
+      <div className="fixed bottom-1 w-full">
+        <Footer />
       </div>
     </div>
   );

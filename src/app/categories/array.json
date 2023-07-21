@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Apple",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81sXUXFQ2oL._SL1500_.jpg"
+  },
+  {
+    "name": "Banana",
+    "image": "https://images.bonanzastatic.com/afu/images/4fd4/49ab/720a_7454118103/il_fullxfull.1665047865_9vim.jpg"
+  },
+  {
+    "name": "Orange",
+    "image": "https://th.bing.com/th/id/R.a157a24f82f3097b64f495417cdfa031?rik=geE2%2bt7lCbxCtw&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f34500000%2fAn-Orange-Fruit-called-Orange-colors-34512068-2738-1825.jpg&ehk=ts78znKvKjBLMVLfCMfSW%2brWzoAfd2%2b3JofATzGNsMI%3d&risl=&pid=ImgRaw&r=0"
+  },
+  {
+    "name": "Grapes",
+    "image": "https://images.unsplash.com/photo-1596363505729-4190a9506133?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+  },
+  {
+    "name": "Watermelon",
+    "image": "https://images.unsplash.com/photo-1621961048737-a9993789e1ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2F0ZXJtZWxvbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    "name": "Strawberry",
+    "color": "Red",
+    "origin": "North America",
+    "image": "https://images.unsplash.com/photo-1587815073078-f636169821e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80"
+  },
+  {
+    "name": "Pineapple",
+    "color": "Yellow",
+    "origin": "South America",
+    "image": "https://example.com/pineapple.jpg"
+  },
+  {
+    "name": "Mango",
+    "color": "Orange",
+    "origin": "South Asia",
+    "image": "https://example.com/mango.jpg"
+  },
+  {
+    "name": "Blueberry",
+    "color": "Blue",
+    "origin": "North America",
+    "image": "https://example.com/blueberry.jpg"
+  },
+  {
+    "name": "Cherry",
+    "color": "Red",
+    "origin": "Europe",
+    "image": "https://example.com/cherry.jpg"
+  },
+  {
+    "name": "Kiwi",
+    "color": "Brown",
+    "origin": "China",
+    "image": "https://example.com/kiwi.jpg"
+  },
+  {
+    "name": "Pear",
+    "color": "Green",
+    "origin": "China",
+    "image": "https://example.com/pear.jpg"
+  }
+]
