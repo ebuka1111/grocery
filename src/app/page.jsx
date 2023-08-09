@@ -69,7 +69,7 @@ export const fruits = [
     image_url: "/Media/Strawberries.jpeg",
   },
   {
-    id: "Milk/Eggs",
+    id: "Milk-Eggs",
     names: "Milk",
     type: "Cow's Milk",
     color: "White",
