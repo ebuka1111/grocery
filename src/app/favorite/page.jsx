@@ -67,7 +67,7 @@ const list = [
   },
 ];
 
-const listOne = () => {
+const ListOne = () => {
   const [selectedlist, setSelectedlist] = useState([]);
 
   useEffect(() => {
@@ -75,7 +75,7 @@ const listOne = () => {
     const selected = shuffledlist.slice(0, 6);
     setSelectedlist(selected);
     // selectedlist(selected);
-  }, [listOne]);
+  }, [ListOne]);
 
   return (
     <div className="bg-orange-100 h-screen mb-44 w-full overflow-scroll">
@@ -140,4 +140,4 @@ const listOne = () => {
   );
 };
 
-export default listOne;
+export default ListOne;

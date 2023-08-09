@@ -161,7 +161,7 @@ const list = [
   },
 ];
 
-const listOne = () => {
+const ListOne = () => {
   const [selectedlist, setSelectedlist] = useState([]);
 
   useEffect(() => {
@@ -169,7 +169,7 @@ const listOne = () => {
     const selected = shuffledlist.slice(0, 6);
     setSelectedlist(selected);
     // selectedlist(selected);
-  }, [listOne]);
+  }, [ListOne]);
 
   return (
     <div className="bg-orange-100 h-screen mb-44 w-full overflow-scroll fixed">
@@ -194,7 +194,7 @@ const listOne = () => {
       </div>
       <div className="h-screen w-full text-center pl-2 pr-2">
         {list.map((listOne) => (
-          <div className="mt-6">
+          <div className="mt-6" key={listOne.name1}>
             <div>
               <p className="text-center pt-4 border-orange-500 border-t-2 mb-2 font normal"></p>
             </div>
@@ -236,7 +236,7 @@ const listOne = () => {
   );
 };
 
-export default listOne;
+export default ListOne;
 
 // import React from "react";
 // import { SlArrowLeft } from "react-icons/sl";

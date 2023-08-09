@@ -135,7 +135,7 @@ const list = [
   },
 ];
 
-const listOne = () => {
+const ListOne = () => {
   const [selectedlist, setSelectedlist] = useState([]);
 
   useEffect(() => {
@@ -143,7 +143,7 @@ const listOne = () => {
     const selected = shuffledlist.slice(0, 6);
     setSelectedlist(selected);
     // selectedlist(selected);
-  }, [listOne]);
+  }, [ListOne]);
 
   return (
     <div className="bg-orange-100 h-screen pb-40 w-full overflow-auto">
@@ -172,7 +172,7 @@ const listOne = () => {
       </div>
       <div className="h-screen w-full text-center pl-4 pr-4">
         {list.map((listOne) => (
-          <div className="mt-6">
+          <div className="mt-6" key={listOne.image1}>
             <div>
               <p className="text-center pt-2 text-[24px] border-orange-500 border-t-2 mb-2 font-medium hover:text-orange-500 hover:text-[40px]">
                 {listOne.title}
@@ -228,4 +228,4 @@ const listOne = () => {
   );
 };
 
-export default listOne;
+export default ListOne;
