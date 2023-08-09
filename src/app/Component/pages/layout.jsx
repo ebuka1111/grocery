@@ -1,10 +1,17 @@
-// import React from "react";
+import React from "react";
+import { Montserrat } from "next/font/google";
 
-// export const metadata = {
-//   title: "My Account",
-//   description: "This page allows you to view your account",
-// };
+const mon = Montserrat({ subsets: ["latin"] });
 
-// export default function layout({ children }) {
-//   return <div>{children}</div>;
-// }
+export const metadata = {
+  title: "Grocery App",
+  description: "view several pages",
+};
+
+export default function layout({ children }) {
+  return (
+    <html lang="en" className="max-w-[480px] max-h-[828px]">
+      <body className={mon.className}>{children}</body>
+    </html>
+  );
+}

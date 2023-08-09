@@ -7,20 +7,19 @@ import { IoIosPeople } from "react-icons/io";
 import { BiPhoneCall } from "react-icons/bi";
 import { MdHelp } from "react-icons/md";
 import { FcRatings } from "react-icons/fc";
-import { LuLogOut } from "react-icons/lu";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { BsCardChecklist, BsExclamationCircle } from "react-icons/bs";
+import { BsCardChecklist } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
   const [Nav, setNav] = useState(false);
   return (
-    <div className={"ml-6 h-screen w-full fixed"}>
-      <nav className="bg-transparent top-2 fixed md:w-[47.4%] w-[100%] z-10 overflow-hidden">
+    <div className={"ml-6 w-full"}>
+      <nav className="bg-transparent top-2 md:w-[47.4%] w-[100%] z-1 overflow-hidden">
         <ul className="flex">
           <div onClick={() => setNav((prev) => !prev)} className="mt-4">
-            <RxHamburgerMenu size={30} className="z-50 text-orange-500" />
+            <RxHamburgerMenu size={30} />
           </div>
           <div
             className={
@@ -73,7 +72,7 @@ export default function Navbar() {
                   Refer and earn
                 </li>
               </Link>
-              <Link href="/contact-us">
+              <Link href="/Contact-us">
                 <li
                   onClick={() => setNav(false)}
                   className="py-2 flex space-x-4 font-normal"
@@ -97,20 +96,6 @@ export default function Navbar() {
               >
                 <FcRatings size={24} className="text-white mt-1 mr-1" />
                 Rate Us
-              </li>
-              <li
-                onClick={() => setNav(false)}
-                className="py-2 flex space-x-4 font-normal"
-              >
-                <BsExclamationCircle size={24} className="mt-1 mr-1" />
-                About Us
-              </li>
-              <li
-                onClick={() => setNav(false)}
-                className="py-2 flex space-x-4 font-normal"
-              >
-                <LuLogOut size={24} className="mt-1 mr-1" />
-                Offer & Promotions
               </li>
             </div>
           </div>

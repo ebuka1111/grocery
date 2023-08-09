@@ -11,7 +11,7 @@ import list from "./Item.json";
 export default function Slider() {
   const data = list.map((Item) => (
     <SwiperSlide key={Item.image} className="w-[90px] h-max">
-      <div className="bg-gray-200 w-[100px] shadow-lg h-[180px] flex flex-col justify-center rounded-lg">
+      <div className="bg-gray-200 hover:cursor-pointer w-[100px] shadow-lg h-[180px] flex flex-col justify-center rounded-lg">
         <Image
           className="rounded-md shadow-md text-center"
           src={Item.image}
@@ -19,7 +19,7 @@ export default function Slider() {
           width={200}
           height={200}
         />
-        <h3 className="font-medium text-center mt-4 mb-1 text-[14px] text-black flex justify-center">
+        <h3 className="font-medium text-center mt-4 mb-1 text-[14px] flex justify-center">
           {Item.name}
         </h3>
         <div className="text-orange-500 flex justify-around items-center ml-2">
@@ -40,11 +40,11 @@ export default function Slider() {
     <Swiper
       className="shadow-md hover:cursor-pointer"
       modules={[Pagination, Autoplay]}
-      spaceBetween={80}
+      spaceBetween={100}
       slidesPerView={4}
       centeredSlides={true}
       autoplay={{
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
       }}
       // pagination={{ clickable: true }}
